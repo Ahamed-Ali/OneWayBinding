@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GettingStarted.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   
+    xmlns:local="[local ]clr-namespace:GettingStarted"
+    xmlns:locall="clr-namespace:GettingStarted">
+   
+
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <locall:CustomDrawing NewText="{Binding EntryText,Mode=OneWay}" HeightRequest="100" WidthRequest="100">
+            <locall:CustomDrawing.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </locall:CustomDrawing.GestureRecognizers>
+        </locall:CustomDrawing>
+        <Label Text="{Binding EntryText,Mode=OneWay}"/>
+
+      
+        <Button Clicked="Button_Clicked" Text="Change Text" />
+
+    </StackLayout>
+
+
+
+
+</ContentPage>
